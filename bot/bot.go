@@ -46,6 +46,8 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
+	s.ChannelMessageSend(m.ChannelID, "Bing Bong Bing Bong, 15 mins until Bing Bong")
+
 	if m.Content == "ping" {
 		_, _ = s.ChannelMessageSend(m.ChannelID, "pong")
 	}
